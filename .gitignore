@@ -1,4 +1,9 @@
 point_to_line_distance/build/
 point_to_line_distance/bin/
 point_to_line_distance/lib/
+point_to_line_distance/data/
 
+quad_tree_map/build/
+quad_tree_map/bin/
+quad_tree_map/lib/
+quad_tree_map/data/
