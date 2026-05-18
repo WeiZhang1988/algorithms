@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package protomsg;
+
+message ProtoMessage {
+    int32  id = 1;
+    string content = 2;
+}
+
+message ProtoRequest {
+    string cmd = 1;
+    int32  num = 2;
+}
+
+message ProtoReply {
+    string rep = 1;
+    int32  res = 2;
+}

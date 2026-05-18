@@ -1,0 +1,10 @@
+find_path(ZEROMQ_INCLUDE_DIR NAMES zmq.h)
+find_library(ZEROMQ_LIBRARY NAMES zmq libzmq)
+if(NOT ZEROMQ_INCLUDE_DIR OR NOT ZEROMQ_LIBRARY)
+    message(FATAL_ERROR "ZeroMQ 未找到！请安装或指定路径")
+endif()
+
+add_executable(pub pub.cpp)
+target_include_directories(pub PUBLIC ${PROJECT_SOURCE_DIR}/include)
+target_include_directories(pub PRIVATE ${ZEROMQ_INCLUDE_DIR})
+target_link_libraries(pub PRIVATE ${ZEROMQ_LIBRARY})
